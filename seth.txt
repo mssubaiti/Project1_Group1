@@ -1,0 +1,6 @@
+
+<<<<<<< HEAD
+First File
+=======
+This is my file - Seth
+>>>>>>> Seth/branching_exercise
