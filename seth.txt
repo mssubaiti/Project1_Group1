@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 First File
 =======
 This is my file - Seth
+>>>>>>> Seth/branching_exercise
+=======
+New File
 >>>>>>> Seth/branching_exercise
