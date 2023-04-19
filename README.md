@@ -1,22 +1,48 @@
 # Project1_Group1
 
+Our goal was to analyze the stock data of three telecommunications companies--AT&T, T-Mobile, and Verizon--and determine which company a potential investor should invest in. 
+
+Overall, we determined that AT&T is the best option because it's less volatile and because of it's liquidity and consistent dividend payments, but it would be wise to view each company's financial reports before making a final decision. 
+
+## Obtaining the data
+
+We obtained our data from the [NASDAQ website](https://www.nasdaq.com/) using the API. <!-- on their [Developer Platform](https://developer.nasdaq.com/). -->
+
+![](images/api.png)
+
 ## 1. How much did the stock volume fluctuate for each company?
+
+Volume is the number of shares transactions between the open and close on a daily basis.
+
+Looking at volume over the lifetime of a company is beneficial because it provides us insight into the growth and health of the business.
 
 ![](images/1.png)
 
-_Analysis_: Verizon has a massive spike in 2014 in its daily volume. 
+**Analysis**: Verizon has a massive spike in 2014 in its daily volume. 
+
+### Looking into the volume outlier of Verizon in 2014.
+
+Verizon Q1 Analysis
+It appears the outlier is specifically at the end of February beginning of March. According to research, Verizon acquired Vodafone at this time. It used proceeds from capital market transactions that it acquired in Sept 2013 and February 2014 as well as $6.6 billion borrowed February, 21 2014. This could account for such a peak in it's stock volume at this time, and for the sake of analyzing for investment purposes, this is not a notable piece of information. 
+
+![](images/7_4.png)
 
 ## 2. How did Price change over each companies lifetime?
 
+The price of stock is the price of a single share. It is determined by calculating the company market capital divided by the number of shares
+
 ![](images/2_1.png)
 
-_Analysis_: T-Mobile’s data is limited to 2007-2018. Therefore, it is best to focus on the last 10 years of the data
+**Analysis**: T-Mobile’s data is limited to 2007-2018. Therefore, it is best to focus on the last 10 years of the data
 
 ![](images/2_2.png)
 
-_Analysis_: T Mobile's price change fluctuations are severe. We are looking for a more linear or consistent positive percentage change - this indicates the stock price is increasing or staying at a competitive price in relation to industry.
+**Analysis**: T-Mobile's price change fluctuations are severe. We are looking for a more linear or consistent positive percentage change - this indicates the stock price is increasing or staying at a competitive price in relation to industry.
 
 ## 3. How did stock volume change in the most recent years?
+
+Daily trading volume allows us to see the number of shares of a stock that are traded in a given day. This helps us assess the liquidity of the market for that stock. High trading volume is usually good. 
+
 
 <!-- ![](images/3_1.png)
 
@@ -26,7 +52,7 @@ _Analysis_: T Mobile's price change fluctuations are severe. We are looking for 
 
 ![](images/3_4.png)
 
-_Analysis_: ATT is more liquid than the others. Investors can sell and buy these shares easier than the other two companies for this reason.
+**Analysis**: ATT is more liquid than the others. Investors can sell and buy these shares easier than the other two companies for this reason.
 
 ## 4. How did Stock Price change in the most recent years? 
 
@@ -34,7 +60,7 @@ _Analysis_: ATT is more liquid than the others. Investors can sell and buy these
 
 ![](images/4_2.png)
 
-Analysis: Even zoomed in on the last year we see that T Mobile has more fluctuations, ATT and Verizon are less volatile indicating they are more stable and better investment choices with the given data
+**Analysis**: Even zoomed in on the last year we see that T-Mobile has more fluctuations, ATT and Verizon are less volatile indicating they are more stable and better investment choices with the given data
 
 
 ## 5. Which company provides the higher and most consistent dividends for our investor?
@@ -49,7 +75,7 @@ Analysis: Even zoomed in on the last year we see that T Mobile has more fluctuat
 
 ![](images/dividend_yield_2.png)
 
-_Analysis_: AT&T and Verizon make consistent dividend payments, which is important for an investor seeking to get a steady income from their investments. 
+**Analysis**: AT&T and Verizon make consistent dividend payments, which is important for an investor seeking to get a steady income from their investments. 
 
 T-Mobile on the other hand only paid their dividends in 2013 in one big lump sum. This could mean that T-Mobile usually reinvests its profits into the business or that it had a significantly profitably year in 2013 and decided to pay a high dividends payment. 
 
@@ -67,7 +93,7 @@ The data show us there there are no quarters that show significant peaks or that
 
 ![](images/6_1.png)
   
-- T Mobile shows less fluctuations in Quarter 1 but its percent change is severe.
+- T-Mobile shows less fluctuations in Quarter 1 but its percent change is severe.
 
 ![](images/6_2.png)
 
