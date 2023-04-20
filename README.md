@@ -1,5 +1,15 @@
 # Project1_Group1
 
+## Contributions 
+Generally speaking, each member worked equal parts on the code,  the analysis of the data, and the powerpoint presentation. 
+|Member|Contribution|
+|------|------------|
+|Seth  | Intro, slides 1 & 2, volume & price|
+|Andrew| slides 3 & 4, `README.md`, average trading volume, price|
+|Madi| slides 5 & 6, data cleanup, dividend yield|
+|Josh| slides 7 & 8, API, seasonal analysis|
+
+## Objective
 Our goal was to analyze the stock data of three telecommunications companies--AT&T, T-Mobile, and Verizon--and determine which company a potential investor should invest in. 
 
 Overall, we determined that AT&T is the best option because it's less volatile and because of it's liquidity and consistent dividend payments, but it would be wise to view each company's financial reports before making a final decision. 
@@ -115,6 +125,12 @@ T-Mobile has a very weak correlation between volume and price
 Verizon also has a weak correlation with several outliers. 
 
 ![](images/7_3.png)
+
+## 8. What is the P/E Ratio for each company in the latest years of data? 
+
+![](Graphs/peratio_verizon_att.png)
+
+Decrease in earnings: If it's not the price, then maybe AT&T and Verizon have a decrease in EPS while the prices of stock were the same. And it does appear that in those years, the EPS were decreasing as the price remained the same or slightly increased.
 
 <!-- ![](images/7_4.png)
 
