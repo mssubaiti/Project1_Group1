@@ -128,7 +128,7 @@ Verizon also has a weak correlation with several outliers.
 
 ## 8. What is the P/E Ratio for each company in the latest years of data? 
 
-![](Graphs/peratio_verizon_att.png)
+![](Output_Graphs/peratioall.png)
 
 Decrease in earnings: If it's not the price, then maybe AT&T and Verizon have a decrease in EPS while the prices of stock were the same. And it does appear that in those years, the EPS were decreasing as the price remained the same or slightly increased.
 
