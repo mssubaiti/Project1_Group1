@@ -1,191 +1,198 @@
-# Project1_Group1
+Telecommunications Stock Analysis
 
-## Contributions 
-Generally speaking, each member worked equal parts on the code,  the analysis of the data, and the powerpoint presentation. 
-|Member|Contribution|
-|------|------------|
-|Seth  | Intro, slides 1 & 2, volume & price|
-|Andrew| slides 3 & 4, `README.md`, average trading volume, price|
-|Madi| slides 5 & 6, data cleanup, dividend yield|
-|Josh| slides 7 & 8, API, seasonal analysis|
+Project Overview
 
-## Objective
-Our goal was to analyze the stock data of three telecommunications companies--AT&T, T-Mobile, and Verizon--and determine which company a potential investor should invest in. 
+I analyzed historical stock market data for three major telecommunications companies—AT&T, T-Mobile, and Verizon—to evaluate their performance from an investment perspective.
 
-Overall, we determined that AT&T is the best option because it's less volatile and because of it's liquidity and consistent dividend payments, but it would be wise to view each company's financial reports before making a final decision. 
+I collected and cleaned historical market data, analyzed stock price and trading volume trends, investigated volatility and seasonality, evaluated dividend behavior and P/E ratios, and explored relationships between key financial metrics.
 
-## Obtaining the data
+The analysis focused on answering a central question:
 
-We obtained our data from the [NASDAQ website](https://www.nasdaq.com/) using the API. <!-- on their [Developer Platform](https://developer.nasdaq.com/). -->
+Based on historical market performance, which of these three telecommunications companies presents the strongest potential investment opportunity?
 
-![](Output_Graphs/api.png)
+Based on the available data, I identified AT&T as the strongest overall option, primarily because of its comparatively lower volatility, liquidity, and consistent dividend payments. However, historical stock performance alone is not sufficient for an investment decision, and company financial statements and broader market conditions should also be considered.
 
-## 1. How much did the stock volume fluctuate for each company?
+Tools & Skills
 
-Volume is the number of shares transactions between the open and close on a daily basis.
+* Python
+* Pandas
+* APIs
+* Data cleaning and transformation
+* Exploratory Data Analysis (EDA)
+* Statistical analysis
+* Data visualization
+* Financial and investment analysis
+* Correlation analysis
+* Time-series and seasonal analysis
 
-Looking at volume over the lifetime of a company is beneficial because it provides us insight into the growth and health of the business.
+⸻
 
-![](Output_Graphs/1.png)
+Data Collection
 
-**Analysis**: Verizon has a massive spike in 2014 in its daily volume. 
+I obtained historical stock data from the NASDAQ website using its API.
 
-### Looking into the volume outlier of Verizon in 2014.
+After retrieving the data, I cleaned and structured the datasets so the three companies could be compared across common financial measures.
 
-Verizon Q1 Analysis
-It appears the outlier is specifically at the end of February beginning of March. According to research, Verizon acquired Vodafone at this time. It used proceeds from capital market transactions that it acquired in Sept 2013 and February 2014 as well as $6.6 billion borrowed February, 21 2014. This could account for such a peak in it's stock volume at this time, and for the sake of analyzing for investment purposes, this is not a notable piece of information. 
+⸻
 
-![](Output_Graphs/7_4.png)
+1. Historical Trading Volume
 
-## 2. How did Price change over each companies lifetime?
+I first examined how trading volume fluctuated throughout each company’s available history.
 
-The price of stock is the price of a single share. It is determined by calculating the company market capital divided by the number of shares
+Daily trading volume represents the number of shares traded during a given trading day. Examining volume can provide insight into a stock’s liquidity and unusual periods of market activity.
 
-![](Output_Graphs/2_1.png)
+Finding
 
-**Analysis**: T-Mobile’s data is limited to 2007-2018. Therefore, it is best to focus on the last 10 years of the data
+Verizon experienced a significant spike in trading volume in early 2014.
 
-![](Output_Graphs/2_2.png)
+I investigated the outlier rather than treating it as normal trading behavior.
 
-**Analysis**: T-Mobile's price change fluctuations are severe. We are looking for a more linear or consistent positive percentage change - this indicates the stock price is increasing or staying at a competitive price in relation to industry.
+Investigating Verizon’s 2014 Outlier
 
-## 3. How did stock volume change in the most recent years?
+The spike occurs around the end of February and beginning of March 2014. During this period, Verizon completed its acquisition of Vodafone’s stake in Verizon Wireless.
 
-Daily trading volume allows us to see the number of shares of a stock that are traded in a given day. This helps us assess the liquidity of the market for that stock. High trading volume is usually good. 
+Because this was an unusual corporate event involving substantial financing and market activity, I treated the spike as an event-specific outlier rather than evidence of Verizon’s typical trading behavior.
 
+⸻
 
-<!-- ![](Output_Graphs/3_1.png)
+2. Historical Stock Price
 
-![](Output_Graphs/3_2.png)
+I analyzed how each company’s stock price changed throughout its available history.
 
-![](Output_Graphs/3_3.png) -->
+T-Mobile’s available dataset covered a shorter period than the other companies, so I narrowed the comparison to the most recent ten years to make the analysis more comparable.
 
-![](Output_Graphs/3_4.png)
+Finding
 
-**Analysis**: ATT is more liquid than the others. Investors can sell and buy these shares easier than the other two companies for this reason.
+T-Mobile demonstrated substantially greater price fluctuations, while AT&T and Verizon showed comparatively more stable historical price behavior.
 
-## 4. How did Stock Price change in the most recent years? 
+For an investor prioritizing stability, the lower volatility of AT&T and Verizon could make them more attractive based on this measure.
 
-<!-- ![](Output_Graphs/4_1.png) -->
+⸻
 
-![](Output_Graphs/4_2.png)
+3. Recent Trading Volume & Liquidity
 
-**Analysis**: Even zoomed in on the last year we see that T-Mobile has more fluctuations, ATT and Verizon are less volatile indicating they are more stable and better investment choices with the given data
+I analyzed recent daily trading volume to compare the relative liquidity of the three stocks.
 
+Higher trading volume generally indicates greater liquidity, meaning investors can typically enter or exit positions more easily.
 
-## 5. Which company provides the higher and most consistent dividends for our investor?
+Finding
 
-<!-- ![](Output_Graphs/5_1.png)
+AT&T demonstrated higher trading volume within the analyzed period, suggesting greater liquidity relative to the other companies.
 
-![](Output_Graphs/5_2.png)
+⸻
 
-![](Output_Graphs/5_3.png) -->
+4. Recent Stock Price & Volatility
 
-![](Output_Graphs/dividend_yield_1.png)
+I then narrowed the analysis to more recent stock-price behavior.
 
-![](Output_Graphs/dividend_yield_2.png)
+Finding
 
-**Analysis**: AT&T and Verizon make consistent dividend payments, which is important for an investor seeking to get a steady income from their investments. 
+T-Mobile continued to demonstrate greater price fluctuations even within the shorter timeframe.
 
-T-Mobile on the other hand only paid their dividends in 2013 in one big lump sum. This could mean that T-Mobile usually reinvests its profits into the business or that it had a significantly profitably year in 2013 and decided to pay a high dividends payment. 
+AT&T and Verizon exhibited comparatively lower volatility, making their historical performance more consistent within the period analyzed.
 
-Looking at this alone would not give us much insight into the companies financial state however. It is important to look at the financial reports to get a better idea of how each company is doing. 
+⸻
 
-## 6. How does the time of year affect the stock value? Are there seasonal trends? 
+5. Dividend Analysis
 
-<!-- ![](Output_Graphs/6_4.png)
+I evaluated dividend history to determine which companies provided the most consistent shareholder distributions.
 
-![](Output_Graphs/6_5.png) -->
+Finding
 
-The data show us there there are no quarters that show significant peaks or that lead an investor to make short term investment decisions. The fluctuations in price don't seem to be related to the time of year.
- 
-- AT&T Quarter 2 seems to have the highest rate throughout the years. It is the only quarter that shows fewer fluctuations.
+AT&T and Verizon demonstrated more consistent dividend payments during the analyzed period.
 
-![](Output_Graphs/6_1.png)
-  
-- T-Mobile shows less fluctuations in Quarter 1 but its percent change is severe.
+T-Mobile’s historical dividend behavior was substantially different, with the available data showing a large distribution in 2013 rather than the same recurring pattern.
 
-![](Output_Graphs/6_2.png)
+For an investor prioritizing consistent income, AT&T and Verizon therefore appeared stronger based on historical dividend behavior.
 
-- Verizon has no obvious pattern from these graphs.
+Dividend history alone, however, does not establish the financial health of a company. Earnings, cash flow, payout ratios, debt, and other financial measures would need to be considered before making an investment decision.
 
+⸻
 
-![](Output_Graphs/6_3.png)
+6. Seasonal Analysis
 
-## 7. What is the correlation between price and volume for each company
+I investigated whether stock performance demonstrated meaningful seasonal patterns across quarters.
 
-AT&T: as price increases volume increases there is a moderately strong negative correlation here.
+The goal was to determine whether particular periods of the year consistently produced stronger or weaker stock performance.
 
-![](Output_Graphs/7_1.png)
+AT&T
 
-T-Mobile has a very weak correlation between volume and price
+AT&T’s second quarter showed comparatively stronger performance across portions of the dataset and somewhat less fluctuation.
 
-![](Output_Graphs/7_2.png)
+T-Mobile
 
-Verizon also has a weak correlation with several outliers. 
+T-Mobile showed less fluctuation during portions of the first quarter, although its overall percentage changes remained substantial.
 
-![](Output_Graphs/7_3.png)
+Verizon
 
-## 8. What is the P/E Ratio for each company in the latest years of data? 
+Verizon did not demonstrate an obvious recurring quarterly pattern.
 
-![](Output_Graphs/peratioall.png)
+Finding
 
-Decrease in earnings: If it's not the price, then maybe AT&T and Verizon have a decrease in EPS while the prices of stock were the same. And it does appear that in those years, the EPS were decreasing as the price remained the same or slightly increased.
+Overall, I did not identify a sufficiently consistent seasonal pattern to support a short-term investment strategy based solely on quarter of the year.
 
-<!-- ![](Output_Graphs/7_4.png)
+⸻
 
-![](Output_Graphs/7_5.png)
+7. Price & Volume Correlation
 
-![](Output_Graphs/7_6.png)
+I examined the relationship between stock price and trading volume for each company.
 
-![](Output_Graphs/7_7.png)
+AT&T
 
-![](Output_Graphs/7_8.png)
+AT&T demonstrated a more noticeable relationship between price and volume than the other companies within the analyzed data.
 
-![](Output_Graphs/7_9.png)
+T-Mobile
 
-![](Output_Graphs/7_10.png)
+T-Mobile demonstrated a weak relationship between trading volume and stock price.
 
-![](Output_Graphs/7_11.png)
+Verizon
 
-![](Output_Graphs/7_12.png)
+Verizon also demonstrated a relatively weak relationship, with several notable outliers.
 
-![](Output_Graphs/7_13.png)
+Finding
 
-![](Output_Graphs/7_14.png)
+Trading volume alone did not consistently explain stock-price movement across the three companies, suggesting that additional market and company-specific factors would need to be considered.
 
-![](Output_Graphs/7_15.png)
+⸻
 
-![](Output_Graphs/7_16.png)
+8. P/E Ratio Analysis
 
-![](Output_Graphs/7_17.png)
+Finally, I examined recent price-to-earnings (P/E) ratios.
 
-![](Output_Graphs/7_18.png)
+Changes in P/E ratios can result from movements in either stock price or earnings per share (EPS).
 
-![](Output_Graphs/7_19.png)
+For AT&T and Verizon, periods of declining EPS combined with relatively stable or increasing stock prices contributed to changes in their P/E ratios.
 
-![](Output_Graphs/7_20.png)
+This reinforced the importance of evaluating underlying earnings alongside market-price performance rather than interpreting stock price independently.
 
-![](Output_Graphs/7_21.png)
+⸻
 
-![](Output_Graphs/7_22.png)
+Overall Findings
 
-![](Output_Graphs/7_23.png)
+Across the dimensions I analyzed:
 
-![](Output_Graphs/7_24.png)
+* AT&T demonstrated strong liquidity, comparatively stable pricing, and consistent dividend payments.
+* Verizon also demonstrated relatively stable pricing and consistent dividends, although its historical data contained notable event-driven volume outliers.
+* T-Mobile demonstrated greater price volatility and a less consistent historical dividend pattern within the available dataset.
 
-![](Output_Graphs/7_25.png)
+Based on these factors, AT&T emerged as the strongest potential investment candidate within the scope of this analysis.
 
-![](Output_Graphs/7_26.png)
+This conclusion is based solely on the historical data and metrics analyzed in this project and should not be interpreted as financial advice.
 
-![](Output_Graphs/7_27.png)
+⸻
 
-![](Output_Graphs/7_28.png)
+What I Demonstrated
 
-![](Output_Graphs/7_29.png)
+Through this project, I:
 
-![](Output_Graphs/7_30.png)
+* Retrieved financial data programmatically through an API
+* Cleaned and transformed raw datasets for analysis
+* Conducted exploratory and statistical analysis
+* Identified and investigated anomalous data rather than automatically excluding it
+* Compared companies across multiple financial measures
+* Analyzed historical and seasonal trends
+* Evaluated correlations between financial variables
+* Created visualizations to communicate findings
+* Translated quantitative results into an investment-oriented recommendation
 
-![](Output_Graphs/7_31.png)
-
-![](Output_Graphs/7_32.png) -->
+The project demonstrates my ability to take a broad business question, identify relevant measures, investigate the data, and communicate a defensible conclusion.
